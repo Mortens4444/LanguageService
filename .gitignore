@@ -1,0 +1,7 @@
+.vs/
+**/bin/
+**/obj/
+*.nupkg
+*.exe
+packages/
+LanguageService/.~lock.Languages.ods#
