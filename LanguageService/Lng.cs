@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using System.Windows.Forms;
-using System.Windows.Media;
 using LanguageService.Interfaces;
 using LanguageService.Ods;
 using Application = System.Windows.Forms.Application;
@@ -13,6 +11,8 @@ namespace LanguageService
 {
 	public static class Lng
 	{
+		private const string LanguageFile = "Languages.ods";
+
 		public static Language DefaultLanguage;
 
 		public static readonly Dictionary<(Language Language, string ElementIdentifier), List<string>> AllLanguageElements;
@@ -23,18 +23,16 @@ namespace LanguageService
 		{
 			SetDefaultLanguage();
 
-			var languageFiles = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, @"Languages.ods");
+			var languageFiles = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, LanguageFile);
 			if (languageFiles.Any())
 			{
 				AllLanguageElements = languageElementLoader.LoadElements(languageFiles.First());
 			}
+			else
+			{
+				MessageBox.Show($"Cannot find {LanguageFile} file in directory {AppDomain.CurrentDomain.BaseDirectory}. This file can be found in the packages\\Mtf.LanguageService.1.0.x\\lib folder of the solution.", "Mtf.LanguageService - File not found", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+			}
 		}
-
-
-
-
-
-
 
 		private static void SetDefaultLanguage()
 		{
@@ -68,7 +66,7 @@ namespace LanguageService
 		private static string GetLanguageElement(string elementIdentifier, int index, Language language = Language.English)
 		{
 			var key = (language, elementIdentifier);
-			return AllLanguageElements.ContainsKey(key) ? AllLanguageElements[key][index] : null;
+			return AllLanguageElements != null && AllLanguageElements.ContainsKey(key) ? AllLanguageElements[key][index] : null;
 		}
 	}
 }
