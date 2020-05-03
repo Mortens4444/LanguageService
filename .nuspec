@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Mtf.LanguageService</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>Helper library to translate Windows.Forms and WPF applications.</description>
     <authors>Mortens</authors>
     <copyright>Copyright © 2020</copyright>
 	<tags>Lng Translator Language</tags>
 	<license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="master" commit="" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="master" commit="dac060797dba5260c4b26b0dbc46e0ba1a8f5fc5" />
   </metadata>
   <files>
     <file src="D:\Work\LanguageService\LanguageService\bin\Release\**" target="lib" />
