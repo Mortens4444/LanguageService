@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Mtf.Windows.Forms.LanguageService</id>
+    <version>1.0.1</version>
+    <title>Mtf.Windows.Forms.LanguageService</title>
+    <authors>Mortens</authors>
+    <owners>Mortens</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="master" commit="dac060797dba5260c4b26b0dbc46e0ba1a8f5fc5" />
+    <description>Helper library to translate Windows.Forms applications.</description>
+    <releaseNotes>Separated Windows.Forms and WPF libraries.</releaseNotes>
+    <copyright>Copyright © 2020</copyright>
+    <tags>Lng Translator Language Windows Forms</tags>
+    <dependencies>
+	  <group targetFramework=".NETFramework4.8">
+        <dependency id="Ionic.Zip" version="[1.9.1.8,2)" />
+	  </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Work\LanguageService\LanguageService\bin\Release\**" target="lib\net48" />
+	<file src="D:\Work\LanguageService\LanguageService.Windows.Forms\bin\Release\**" target="lib\net48" />
+  </files>
+</package>

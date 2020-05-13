@@ -1,0 +1,1 @@
+nuget pack LanguageService.Windows.Forms.nuspec
