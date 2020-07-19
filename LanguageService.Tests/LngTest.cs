@@ -30,6 +30,14 @@ namespace LanguageService.Tests
 
 			Lng.DefaultLanguage = Language.Chinese;
 			Assert.AreEqual("WMI 存储库", Lng.Elem("WMI Repository"));
+
+			// Test translation from Hungarian to English
+			var translateFromHungarian = Lng.Translate(Language.Hungarian, "Ismétlődés", Language.English);
+			Assert.AreEqual("Repetition", translateFromHungarian);
+
+			// Test translation from Hungarian to Hungarian
+			translateFromHungarian = Lng.Translate(Language.Hungarian, "Ismétlődés", Language.Hungarian);
+			Assert.AreEqual("Ismétlődés", translateFromHungarian);
 		}
 	}
 }

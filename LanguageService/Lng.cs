@@ -50,7 +50,7 @@ namespace LanguageService
 		/// Get a translation of an English expression.
 		/// </summary>
 		/// <param name="toLanguage">The language of the requested translation.</param>
-		/// <param name="elementIdentifier">The requested element, which wanted to be translated.</param>
+		/// <param name="elementIdentifier">The requested element, which wanted to be translated (must be in English).</param>
 		/// <param name="index">Index of the specified translations. If not set, it will return the first translation.</param>
 		/// <returns>Returns the translation or the requested element itself, if it is not present in the dictionary.</returns>
 		public static string Elem(Language toLanguage, string elementIdentifier, int index = 0)
@@ -61,6 +61,31 @@ namespace LanguageService
 				result = GetLanguageElement(elementIdentifier, index);
 			}
 			return String.IsNullOrEmpty(result) ? elementIdentifier : result;
+		}
+
+		/// <summary>
+		/// Get a translation of an expression.
+		/// </summary>
+		/// <param name="fromLanguage">The language of the language element.</param>
+		/// <param name="languageElement">The language element, which is needed to be translated.</param>
+		/// <param name="toLanguage">The translation destination language.</param>
+		/// <returns>The translated element if it's translation exists, otherwise the language element itself is returned.</returns>
+		public static string Translate(Language fromLanguage, string languageElement, Language toLanguage)
+		{
+			foreach (var keyValuePair in AllLanguageElements.Where(elem => elem.Key.Language == fromLanguage))
+			{
+				if (keyValuePair.Value.Any(elem => elem == languageElement))
+				{
+					if (toLanguage == Language.English)
+					{
+						return keyValuePair.Key.ElementIdentifier;
+					}
+
+					return GetLanguageElement(keyValuePair.Key.ElementIdentifier, 0, toLanguage);
+				}
+			}
+
+			return languageElement;
 		}
 
 		private static string GetLanguageElement(string elementIdentifier, int index, Language language = Language.English)

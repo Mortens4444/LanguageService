@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="master" commit="dac060797dba5260c4b26b0dbc46e0ba1a8f5fc5" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="master" commit="1cafcf951cce4fde65035781a3a56aae21737308" />
     <description>Helper library to translate WPF applications.</description>
     <releaseNotes>Separated Windows.Forms and WPF libraries.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
