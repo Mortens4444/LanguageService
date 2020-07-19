@@ -27,3 +27,8 @@ If you need to translate to Hungarian, just use this code snippet.
 Lng.DefaultLanguage = LanguageService.Language.Hungarian;
 Translator.Translate(this);
 ```
+
+You can translate from any language to any other language like this.
+```
+Lng.Translate(Language.Hungarian, "Ismétlődés", Language.English);
+```

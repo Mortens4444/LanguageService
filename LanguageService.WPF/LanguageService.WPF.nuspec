@@ -21,7 +21,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Work\LanguageService\LanguageService\bin\Release\**" target="lib\net48" />
 	<file src="D:\Work\LanguageService\LanguageService.WPF\bin\Release\**" target="lib\net48" />
   </files>
 </package>
