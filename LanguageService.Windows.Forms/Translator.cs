@@ -6,13 +6,23 @@ namespace LanguageService.Windows.Forms
 	public static class Translator
 	{
 		/// <summary>
-		/// Translates a Windows.Forms.Form.
+		/// Translates a Windows.Forms.Form and all of its children.
 		/// </summary>
 		/// <param name="form">The Form to be translated.</param>
 		public static void Translate(Form form)
 		{
 			form.Text = Lng.Elem(form.Text);
 			Translate(form.Controls);
+		}
+
+		/// <summary>
+		/// Translates a UserControl and all of its children.
+		/// </summary>
+		/// <param name="userControl"></param>
+		public static void Translate(UserControl userControl)
+		{
+			userControl.Text = Lng.Elem(userControl.Text);
+			Translate(userControl.Controls);
 		}
 
 		/// <summary>
