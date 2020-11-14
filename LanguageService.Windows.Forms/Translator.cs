@@ -82,6 +82,18 @@ namespace LanguageService.Windows.Forms
 				{
 					Translate(contextMenu.MenuItems);
 				}
+				else if (control is DataGridView dataGridView)
+				{
+					Translate(dataGridView);
+				}
+			}
+		}
+
+		private static void Translate(DataGridView dataGridView)
+		{
+			foreach (DataGridViewColumn column in dataGridView.Columns)
+			{
+				column.HeaderText = Lng.Elem(column.HeaderText);
 			}
 		}
 
