@@ -8,11 +8,12 @@ namespace LanguageService.Tests
 		[TestMethod]
 		public void LngElemTest()
 		{
-			// Test translation to Hungarian
-			Assert.AreEqual("Igen", Lng.Elem(Language.Hungarian, "Yes"));
+            // Test translation to Hungarian
+            Assert.AreEqual("Igen", Lng.Elem(Language.Hungarian, "Yes"));
+            Assert.AreEqual("óra", Lng.Elem(Language.Hungarian, "hour"));
 
-			// Test translation to German
-			Assert.AreEqual("Ja", Lng.Elem(Language.German, "Yes"));
+            // Test translation to German
+            Assert.AreEqual("Ja", Lng.Elem(Language.German, "Yes"));
 
 			// Test some elements to ensure not deleting rows accidentally on sheets
 			Assert.AreEqual("WMI Adattár", Lng.Elem(Language.Hungarian, "WMI Repository"));
