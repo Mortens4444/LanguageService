@@ -66,11 +66,15 @@ namespace LanguageService.Windows.Forms
 						Translate(node);
 					}
 				}
-				else if (control is MenuStrip menuStrip)
-				{
-					Translate(menuStrip.Items);
-				}
-				else if (control is ComboBox comboBox)
+                else if (control is MenuStrip menuStrip)
+                {
+                    Translate(menuStrip.Items);
+                }
+                else if (control is StatusStrip statusStrip)
+                {
+                    Translate(statusStrip.Items);
+                }
+                else if (control is ComboBox comboBox)
 				{
 					Translate(comboBox, comboBox.Items);
 				}
