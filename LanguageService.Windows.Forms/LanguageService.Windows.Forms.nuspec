@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Mtf.Windows.Forms.LanguageService</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <title>Mtf.Windows.Forms.LanguageService</title>
     <authors>Mortens</authors>
     <owners>Mortens</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="db3fd47efe02565567f2caff729537ca49e3cdc3" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="54fed7ac4245c80a088f152e6d1edcac58f7e48d" />
     <description>Helper library to translate Windows.Forms applications.</description>
     <releaseNotes>Add Playtime register language elements.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
