@@ -1,15 +1,15 @@
-﻿using System;
+﻿using LanguageService.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.IO;
+using System.IO.Compression;
 using System.Xml;
-using Ionic.Zip;
-using LanguageService.Extensions;
 
 namespace LanguageService.Ods
 {
-	public class OdsReader
+    public class OdsReader
 	{
 		private static readonly List<(string Prefix, string Uri)> Namespaces = new List<(string, string)>
 		{
@@ -44,16 +44,20 @@ namespace LanguageService.Ods
 
 		public DataSet ReadFile(string filePath)
 		{
-			var odsZipFile = ZipFile.Read(filePath);
-			var contentXml = odsZipFile.GetXmlDocument("content.xml");
-			var xmlNamespaceManager = contentXml.InitializeXmlNamespaceManager(Namespaces);
-			var odsFile = new DataSet(Path.GetFileName(filePath));
-			var xmlNodeList = contentXml.SelectNodes("/office:document-content/office:body/office:spreadsheet/table:table", xmlNamespaceManager);
-			foreach (XmlNode tableNode in xmlNodeList)
-			{
-				odsFile.Tables.Add(GetSheet(tableNode, xmlNamespaceManager));
-			}
-			return odsFile;
+            using (var zipArchive = ZipFile.OpenRead(filePath))
+            {
+                var contentXml = zipArchive.GetXmlDocument("content.xml");
+
+                var xmlNamespaceManager = contentXml.InitializeXmlNamespaceManager(Namespaces);
+                var odsFile = new DataSet(Path.GetFileName(filePath));
+                var xmlNodeList = contentXml.SelectNodes("/office:document-content/office:body/office:spreadsheet/table:table", xmlNamespaceManager);
+                foreach (XmlNode tableNode in xmlNodeList)
+                {
+                    odsFile.Tables.Add(GetSheet(tableNode, xmlNamespaceManager));
+                }
+
+                return odsFile;
+            }
 		}
 
 		private DataTable GetSheet(XmlNode tableNode, XmlNamespaceManager xmlNamespaceManager)

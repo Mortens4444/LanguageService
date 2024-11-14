@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Mtf.Windows.Forms.LanguageService</id>
+    <version>1.0.10</version>
+    <title>Mtf.Windows.Forms.LanguageService</title>
+    <authors>Mortens</authors>
+    <owners>Mortens</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="2695e4e29fdb410442905b7541da57cb9c7ce5f3" />
+    <description>Helper library to translate Windows.Forms applications.</description>
+    <releaseNotes>Add Playtime register language elements.</releaseNotes>
+    <copyright>Copyright © 2020</copyright>
+    <tags>Lng Translator Language Windows Forms Mortens</tags>
+	<readme>docs\ReadMe.md</readme>
+    <dependencies>
+	  <group targetFramework=".NETFramework4.8">
+        <dependency id="System.IO.Compression" version="4.3.0" />
+	  </group>
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="bin\Release\**\*.*" target="lib\net48" />
+	<file src=".\ReadMe.md" target="docs\" />
+  </files>
+</package>

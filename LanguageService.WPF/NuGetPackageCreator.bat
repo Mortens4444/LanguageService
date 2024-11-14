@@ -1,1 +1,1 @@
-nuget pack LanguageService.WPF.nuspec
+nuget pack .nuspec
