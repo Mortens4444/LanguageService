@@ -5,3 +5,4 @@
 *.exe
 packages/
 LanguageService/.~lock.Languages.ods#
+**/nuget.config*
