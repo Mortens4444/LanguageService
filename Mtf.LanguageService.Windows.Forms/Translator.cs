@@ -42,6 +42,11 @@ namespace Mtf.LanguageService.Windows.Forms
         /// <param name="controls">The ControlCollection to be translated.</param>
         public static void Translate(Control.ControlCollection controls)
         {
+            if (controls == null)
+            {
+                throw new ArgumentNullException(nameof(controls));
+            }
+
             foreach (var control in controls)
             {
                 if (control is WebBrowser)
@@ -150,6 +155,11 @@ namespace Mtf.LanguageService.Windows.Forms
 
         public static void Translate(ToolStripItemCollection toolStripItems)
         {
+            if (toolStripItems == null)
+            {
+                throw new ArgumentNullException(nameof(toolStripItems));
+            }
+
             foreach (ToolStripItem toolStripItem in toolStripItems)
             {
                 toolStripItem.Text = Lng.Elem(toolStripItem.Text);

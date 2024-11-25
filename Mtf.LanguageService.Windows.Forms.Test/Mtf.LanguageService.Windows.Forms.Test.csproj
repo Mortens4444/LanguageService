@@ -37,11 +37,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Mtf.Windows.Forms.LanguageService.1.0.9.nupkg" />
-    <None Remove="nuget.exe" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Private.Uri" Version="4.3.2" />
   </ItemGroup>
 

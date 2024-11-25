@@ -24,7 +24,7 @@ public partial class MainWindow : Window
 
 If you need to translate to Hungarian, just use this code snippet.
 ```
-Lng.DefaultLanguage = LanguageService.Language.Hungarian;
+Lng.DefaultLanguage = Mtf.LanguageService.Language.Hungarian;
 Translator.Translate(this);
 ```
 

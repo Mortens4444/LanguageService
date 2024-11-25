@@ -9,9 +9,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="fd7d3b5c4c0cfdf8aa90fc7cad938bc8ddabfec9" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="9702d002d1f5ede41a8be72a53d35ee61933fe37" />
     <description>Helper library to translate Windows.Forms applications.</description>
-    <releaseNotes>Add Playtime register language elements.</releaseNotes>
+    <releaseNotes>Rename to Mtf.LanguageService.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
     <tags>Lng Translator Language Windows Forms Mortens</tags>
 	<readme>docs\ReadMe.md</readme>
