@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="010cb2812245a23da12ec072b0f083e21d72e322" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="9295126bb576da43f8d77b78b7bb797f47306081" />
     <description>Helper library to translate Windows.Forms applications.</description>
     <releaseNotes>Rename to Mtf.LanguageService.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
