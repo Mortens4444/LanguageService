@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Mtf.WPF.LanguageService</id>
-    <version>2.0.11</version>
+    <version>2.0.26</version>
     <title>Mtf.WPF.LanguageService</title>
     <authors>Mortens</authors>
     <owners>Mortens</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="9702d002d1f5ede41a8be72a53d35ee61933fe37" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="010cb2812245a23da12ec072b0f083e21d72e322" />
     <description>Helper library to translate WPF applications.</description>
     <releaseNotes>Rename to Mtf.LanguageService.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
@@ -29,9 +29,11 @@
 
   </metadata>
   <files>
-    <file src="bin\Release\net481\**" target="lib\net481" />
-    <file src="bin\Release\net8.0-windows\**" target="lib\net8.0-windows7" />
-    <file src="bin\Release\net9.0-windows\**" target="lib\net9.0-windows7" />
+    <file src="Mtf.WPF.LanguageService.targets" target="buildTransitive\Mtf.WPF.LanguageService.targets" />
+    <file src="bin\Release\net481\**" target="lib\net481" exclude= "bin\Release\net481\Languages.ods" />
+    <file src="bin\Release\net8.0-windows\**" target="lib\net8.0-windows7" exclude= "bin\Release\net8.0-windows\Languages.ods" />
+    <file src="bin\Release\net9.0-windows\**" target="lib\net9.0-windows7" exclude= "bin\Release\net9.0-windows\Languages.ods" />
+	<file src="bin\Release\net9.0-windows\Languages.ods" target="buildTransitive\Languages.ods" />
 	<file src=".\ReadMe.md" target="docs\" />
   </files>
 </package>

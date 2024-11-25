@@ -8,7 +8,7 @@
     <AnalysisLevel>latest-all</AnalysisLevel>
     <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <UseWPF>true</UseWPF>
     <Authors>Mortens</Authors>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
@@ -43,7 +43,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ReadMe.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
