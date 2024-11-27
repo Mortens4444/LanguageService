@@ -167,6 +167,10 @@ namespace Mtf.LanguageService.Windows.Forms
                 {
                     Translate(toolStripMenuItem.DropDownItems);
                 }
+                else if (toolStripItem is ToolStripDropDownButton toolStripDropDownButton)
+                {
+                    Translate(toolStripDropDownButton.DropDownItems);
+                }
             }
         }
     }

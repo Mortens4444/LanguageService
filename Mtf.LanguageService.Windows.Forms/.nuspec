@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Mtf.Windows.Forms.LanguageService</id>
-    <version>2.0.16</version>
+    <version>2.0.18</version>
     <title>Mtf.Windows.Forms.LanguageService</title>
     <authors>Mortens</authors>
     <owners>Mortens</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>http://w3.hdsnet.hu/mortens/</projectUrl>
-    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="9295126bb576da43f8d77b78b7bb797f47306081" />
+    <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" />
     <description>Helper library to translate Windows.Forms applications.</description>
     <releaseNotes>Rename to Mtf.LanguageService.</releaseNotes>
     <copyright>Copyright © 2020</copyright>
