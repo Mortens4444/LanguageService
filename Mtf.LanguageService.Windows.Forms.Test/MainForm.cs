@@ -7,7 +7,7 @@ namespace Mtf.LanguageService.Windows.Forms.Test
 		public MainForm()
 		{
 			InitializeComponent();
-			Translator.Translate(this);
+			Translator.Translate(this, toolTip1);
 			treeView1.ExpandAll();
 			comboBox1.SelectedIndex = 0;
 		}

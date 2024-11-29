@@ -20,287 +20,340 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Developer");
-			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Admin", new System.Windows.Forms.TreeNode[] {
-            treeNode3});
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.treeView1 = new System.Windows.Forms.TreeView();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-			this.radioButton1 = new System.Windows.Forms.RadioButton();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.listView1 = new System.Windows.Forms.ListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.dgvCalendar = new System.Windows.Forms.DataGridView();
-			this.dgvcActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.panel1.SuspendLayout();
-			this.groupBox1.SuspendLayout();
-			this.tabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
-			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvCalendar)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// panel1
-			// 
-			this.panel1.Controls.Add(this.groupBox1);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(583, 262);
-			this.panel1.TabIndex = 0;
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.tabControl1);
-			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupBox1.Location = new System.Drawing.Point(0, 0);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(583, 262);
-			this.groupBox1.TabIndex = 0;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Manage users";
-			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControl1.Location = new System.Drawing.Point(3, 16);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(577, 243);
-			this.tabControl1.TabIndex = 0;
-			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.treeView1);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(569, 217);
-			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "Users";
-			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// treeView1
-			// 
-			this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.treeView1.Location = new System.Drawing.Point(3, 3);
-			this.treeView1.Name = "treeView1";
-			treeNode3.Name = "Node2";
-			treeNode3.Text = "Developer";
-			treeNode4.Name = "Node0";
-			treeNode4.Text = "Admin";
-			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-			this.treeView1.Size = new System.Drawing.Size(563, 211);
-			this.treeView1.TabIndex = 0;
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Controls.Add(this.dgvCalendar);
-			this.tabPage2.Controls.Add(this.comboBox1);
-			this.tabPage2.Controls.Add(this.richTextBox1);
-			this.tabPage2.Controls.Add(this.radioButton1);
-			this.tabPage2.Controls.Add(this.checkBox1);
-			this.tabPage2.Controls.Add(this.button1);
-			this.tabPage2.Controls.Add(this.textBox1);
-			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.listView1);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(569, 217);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Groups";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
-            "Key",
-            "Value"});
-			this.comboBox1.Location = new System.Drawing.Point(9, 183);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 21);
-			this.comboBox1.TabIndex = 7;
-			// 
-			// richTextBox1
-			// 
-			this.richTextBox1.Location = new System.Drawing.Point(298, 38);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(265, 60);
-			this.richTextBox1.TabIndex = 6;
-			this.richTextBox1.Text = "Back";
-			// 
-			// radioButton1
-			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Location = new System.Drawing.Point(455, 11);
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new System.Drawing.Size(46, 17);
-			this.radioButton1.TabIndex = 5;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "Epic";
-			this.radioButton1.UseVisualStyleBackColor = true;
-			// 
-			// checkBox1
-			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(335, 14);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(90, 17);
-			this.checkBox1.TabIndex = 4;
-			this.checkBox1.Text = "Daily standup";
-			this.checkBox1.UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(217, 10);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 3;
-			this.button1.Text = "Team";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(83, 10);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(128, 20);
-			this.textBox1.TabIndex = 2;
-			this.textBox1.Text = "Developer team";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(6, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(65, 13);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Group name";
-			// 
-			// listView1
-			// 
-			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-			this.listView1.HideSelection = false;
-			this.listView1.Location = new System.Drawing.Point(5, 38);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(287, 139);
-			this.listView1.TabIndex = 0;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			this.listView1.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "Task";
-			this.columnHeader1.Width = 109;
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Bug";
-			this.columnHeader2.Width = 129;
-			// 
-			// dgvCalendar
-			// 
-			this.dgvCalendar.AllowUserToAddRows = false;
-			this.dgvCalendar.AllowUserToDeleteRows = false;
-			this.dgvCalendar.AllowUserToResizeColumns = false;
-			this.dgvCalendar.AllowUserToResizeRows = false;
-			this.dgvCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.dgvCalendar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvCalendar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvCalendar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvcActivity});
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvCalendar.DefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvCalendar.EnableHeadersVisualStyles = false;
-			this.dgvCalendar.Location = new System.Drawing.Point(298, 104);
-			this.dgvCalendar.Name = "dgvCalendar";
-			this.dgvCalendar.ReadOnly = true;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvCalendar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-			this.dgvCalendar.RowHeadersWidth = 80;
-			this.dgvCalendar.Size = new System.Drawing.Size(265, 73);
-			this.dgvCalendar.TabIndex = 23;
-			// 
-			// dgvcActivity
-			// 
-			this.dgvcActivity.HeaderText = "Activity";
-			this.dgvcActivity.Name = "dgvcActivity";
-			this.dgvcActivity.ReadOnly = true;
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(583, 262);
-			this.Controls.Add(this.panel1);
-			this.Name = "MainForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "User management";
-			this.panel1.ResumeLayout(false);
-			this.groupBox1.ResumeLayout(false);
-			this.tabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage2.ResumeLayout(false);
-			this.tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvCalendar)).EndInit();
-			this.ResumeLayout(false);
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            var treeNode1 = new System.Windows.Forms.TreeNode("Developer");
+            var treeNode2 = new System.Windows.Forms.TreeNode("Admin", new System.Windows.Forms.TreeNode[] { treeNode1 });
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            var dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            var dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            var dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            panel1 = new System.Windows.Forms.Panel();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            tabControl1 = new System.Windows.Forms.TabControl();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            treeView1 = new System.Windows.Forms.TreeView();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            toolStrip1 = new System.Windows.Forms.ToolStrip();
+            toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            dgvCalendar = new System.Windows.Forms.DataGridView();
+            dgvcActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            comboBox1 = new System.Windows.Forms.ComboBox();
+            richTextBox1 = new System.Windows.Forms.RichTextBox();
+            radioButton1 = new System.Windows.Forms.RadioButton();
+            checkBox1 = new System.Windows.Forms.CheckBox();
+            button1 = new System.Windows.Forms.Button();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            listView1 = new System.Windows.Forms.ListView();
+            columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCalendar).BeginInit();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(groupBox1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(680, 302);
+            panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(tabControl1);
+            groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            groupBox1.Location = new System.Drawing.Point(0, 0);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Size = new System.Drawing.Size(680, 302);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Manage users";
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl1.Location = new System.Drawing.Point(4, 19);
+            tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(672, 280);
+            tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(treeView1);
+            tabPage1.Location = new System.Drawing.Point(4, 24);
+            tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage1.Size = new System.Drawing.Size(664, 252);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Users";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            treeView1.Location = new System.Drawing.Point(4, 3);
+            treeView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            treeView1.Name = "treeView1";
+            treeNode1.Name = "Node2";
+            treeNode1.Text = "Developer";
+            treeNode2.Name = "Node0";
+            treeNode2.Text = "Admin";
+            treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode2 });
+            treeView1.Size = new System.Drawing.Size(656, 246);
+            treeView1.TabIndex = 0;
+            toolTip1.SetToolTip(treeView1, "Find");
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(toolStrip1);
+            tabPage2.Controls.Add(dgvCalendar);
+            tabPage2.Controls.Add(comboBox1);
+            tabPage2.Controls.Add(richTextBox1);
+            tabPage2.Controls.Add(radioButton1);
+            tabPage2.Controls.Add(checkBox1);
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(listView1);
+            tabPage2.Location = new System.Drawing.Point(4, 24);
+            tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage2.Size = new System.Drawing.Size(664, 252);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Groups";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripButton1, toolStripLabel1, toolStripLabel2 });
+            toolStrip1.Location = new System.Drawing.Point(4, 224);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new System.Drawing.Size(656, 25);
+            toolStrip1.TabIndex = 24;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = (System.Drawing.Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.ToolTipText = "Language";
+            // 
+            // toolStripLabel1
+            // 
+            toolStripLabel1.Name = "toolStripLabel1";
+            toolStripLabel1.Size = new System.Drawing.Size(27, 22);
+            toolStripLabel1.Text = "Lng";
+            toolStripLabel1.ToolTipText = "Language";
+            // 
+            // dgvCalendar
+            // 
+            dgvCalendar.AllowUserToAddRows = false;
+            dgvCalendar.AllowUserToDeleteRows = false;
+            dgvCalendar.AllowUserToResizeColumns = false;
+            dgvCalendar.AllowUserToResizeRows = false;
+            dgvCalendar.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dgvCalendar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 238);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvCalendar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCalendar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgvcActivity });
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 238);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvCalendar.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvCalendar.EnableHeadersVisualStyles = false;
+            dgvCalendar.Location = new System.Drawing.Point(348, 120);
+            dgvCalendar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvCalendar.Name = "dgvCalendar";
+            dgvCalendar.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 238);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvCalendar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvCalendar.RowHeadersWidth = 80;
+            dgvCalendar.Size = new System.Drawing.Size(309, 84);
+            dgvCalendar.TabIndex = 23;
+            // 
+            // dgvcActivity
+            // 
+            dgvcActivity.HeaderText = "Activity";
+            dgvcActivity.Name = "dgvcActivity";
+            dgvcActivity.ReadOnly = true;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Key", "Value" });
+            comboBox1.Location = new System.Drawing.Point(8, 181);
+            comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(140, 23);
+            comboBox1.TabIndex = 7;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new System.Drawing.Point(348, 44);
+            richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new System.Drawing.Size(308, 69);
+            richTextBox1.TabIndex = 6;
+            richTextBox1.Text = "Back";
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new System.Drawing.Point(531, 13);
+            radioButton1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new System.Drawing.Size(47, 19);
+            radioButton1.TabIndex = 5;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Epic";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new System.Drawing.Point(391, 16);
+            checkBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new System.Drawing.Size(98, 19);
+            checkBox1.TabIndex = 4;
+            checkBox1.Text = "Daily standup";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(253, 12);
+            button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(88, 27);
+            button1.TabIndex = 3;
+            button1.Text = "Team";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(97, 12);
+            textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(149, 23);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "Developer team";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(7, 15);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(73, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Group name";
+            // 
+            // listView1
+            // 
+            listView1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2 });
+            listView1.Location = new System.Drawing.Point(6, 44);
+            listView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(334, 120);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Task";
+            columnHeader1.Width = 109;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Bug";
+            columnHeader2.Width = 129;
+            // 
+            // toolTip1
+            // 
+            toolTip1.ShowAlways = true;
+            // 
+            // toolStripLabel2
+            // 
+            toolStripLabel2.Name = "toolStripLabel2";
+            toolStripLabel2.Size = new System.Drawing.Size(59, 22);
+            toolStripLabel2.Text = "Language";
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(680, 302);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "MainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "User management";
+            panel1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCalendar).EndInit();
+            ResumeLayout(false);
+        }
 
-		}
+        #endregion
 
-		#endregion
-
-		private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage1;
@@ -318,6 +371,11 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.DataGridView dgvCalendar;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgvcActivity;
-	}
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+    }
 }
 
