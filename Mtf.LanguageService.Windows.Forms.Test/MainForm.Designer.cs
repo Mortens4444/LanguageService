@@ -44,6 +44,7 @@
             toolStrip1 = new System.Windows.Forms.ToolStrip();
             toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             dgvCalendar = new System.Windows.Forms.DataGridView();
             dgvcActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             comboBox1 = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,8 @@
             columnHeader1 = new System.Windows.Forms.ColumnHeader();
             columnHeader2 = new System.Windows.Forms.ColumnHeader();
             toolTip1 = new System.Windows.Forms.ToolTip(components);
-            toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(components);
+            testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -65,6 +67,7 @@
             tabPage2.SuspendLayout();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCalendar).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -177,6 +180,12 @@
             toolStripLabel1.Text = "Lng";
             toolStripLabel1.ToolTipText = "Language";
             // 
+            // toolStripLabel2
+            // 
+            toolStripLabel2.Name = "toolStripLabel2";
+            toolStripLabel2.Size = new System.Drawing.Size(59, 22);
+            toolStripLabel2.Text = "Language";
+            // 
             // dgvCalendar
             // 
             dgvCalendar.AllowUserToAddRows = false;
@@ -228,6 +237,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.ContextMenuStrip = contextMenuStrip1;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Key", "Value" });
             comboBox1.Location = new System.Drawing.Point(8, 181);
@@ -301,6 +311,7 @@
             // 
             listView1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2 });
+            listView1.ContextMenuStrip = contextMenuStrip1;
             listView1.Location = new System.Drawing.Point(6, 44);
             listView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             listView1.Name = "listView1";
@@ -323,11 +334,17 @@
             // 
             toolTip1.ShowAlways = true;
             // 
-            // toolStripLabel2
+            // contextMenuStrip1
             // 
-            toolStripLabel2.Name = "toolStripLabel2";
-            toolStripLabel2.Size = new System.Drawing.Size(59, 22);
-            toolStripLabel2.Text = "Language";
+            contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { testToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new System.Drawing.Size(96, 26);
+            // 
+            // testToolStripMenuItem
+            // 
+            testToolStripMenuItem.Name = "testToolStripMenuItem";
+            testToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            testToolStripMenuItem.Text = "Test";
             // 
             // MainForm
             // 
@@ -348,6 +365,7 @@
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCalendar).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -376,6 +394,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 

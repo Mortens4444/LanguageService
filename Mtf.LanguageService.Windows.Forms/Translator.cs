@@ -28,7 +28,10 @@ namespace Mtf.LanguageService.Windows.Forms
             var originals = Translate(form.Controls, toolTip);
             foreach (var original in originals)
             {
-                originalTexts.Add(original.Key, original.Value);
+                if (!originalTexts.ContainsKey(original.Key))
+                {
+                    originalTexts.Add(original.Key, original.Value);
+                }
             }
             return originalTexts;
         }
@@ -92,7 +95,7 @@ namespace Mtf.LanguageService.Windows.Forms
                     TranslateTooltips(controlWithTextProperty, toolTip);
                     if (controlWithTextProperty.ContextMenuStrip != null)
                     {
-                        Translate(controlWithTextProperty.ContextMenuStrip.Items, toolTip, result);
+                        result.AddRange(Translate(controlWithTextProperty.ContextMenuStrip.Items, toolTip));
                     }
                 }
 
@@ -113,38 +116,38 @@ namespace Mtf.LanguageService.Windows.Forms
                 {
                     foreach (TreeNode node in treeview.Nodes)
                     {
-                        Translate(node, toolTip, result);
+                        result.AddRange(Translate(node, toolTip));
                     }
                 }
                 else if (control is MenuStrip menuStrip)
                 {
-                    Translate(menuStrip.Items, toolTip, result);
+                    result.AddRange(Translate(menuStrip.Items, toolTip));
                 }
                 else if (control is StatusStrip statusStrip)
                 {
-                    Translate(statusStrip.Items, toolTip, result);
+                    result.AddRange(Translate(statusStrip.Items, toolTip));
                 }
                 else if (control is ToolStrip toolStrip)
                 {
-                    Translate(toolStrip.Items, toolTip, result);
+                    result.AddRange(Translate(toolStrip.Items, toolTip));
                 }
                 else if (control is ComboBox comboBox)
                 {
-                    Translate(comboBox, comboBox.Items, toolTip);
+                    Translate(comboBox);
                 }
                 else if (control is ContextMenuStrip contextMenuStrip)
                 {
-                    Translate(contextMenuStrip.Items, toolTip, result);
+                    result.AddRange(Translate(contextMenuStrip.Items, toolTip));
                 }
 #if NET481
                 else if (control is ContextMenu contextMenu)
                 {
-                    Translate(contextMenu.MenuItems, toolTip, result);
+                    result.AddRange(Translate(contextMenu.MenuItems, toolTip));
                 }
 #endif
                 else if (control is DataGridView dataGridView)
                 {
-                    Translate(dataGridView, toolTip, result);
+                    result.AddRange(Translate(dataGridView, toolTip));
                 }
             }
 
@@ -198,92 +201,127 @@ namespace Mtf.LanguageService.Windows.Forms
             }
         }
 
-        private static void Translate(DataGridView dataGridView, ToolTip toolTip, List<KeyValuePair<object, string>> originalTexts)
+        public static List<KeyValuePair<object, string>> Translate(DataGridView dataGridView, ToolTip toolTip = null)
         {
+            if (dataGridView == null)
+            {
+                throw new ArgumentNullException(nameof(dataGridView));
+            }
+
+            var originalTexts = new List<KeyValuePair<object, string>>();
             foreach (DataGridViewColumn column in dataGridView.Columns)
             {
                 originalTexts.Add(new KeyValuePair<object, string>(column, column.HeaderText));
                 column.HeaderText = Lng.Elem(column.HeaderText);
             }
+            return originalTexts;
         }
 
-        private static void Translate(TreeNode node, ToolTip toolTip, List<KeyValuePair<object, string>> originalTexts)
+        public static List<KeyValuePair<object, string>> Translate(TreeNode node, ToolTip toolTip = null)
         {
+            if (node == null)
+            {
+                throw new ArgumentNullException(nameof(node));
+            }
+
+            var originalTexts = new List<KeyValuePair<object, string>>();
             foreach (TreeNode childNode in node.Nodes)
             {
-                Translate(childNode, toolTip, originalTexts);
+                originalTexts.AddRange(Translate(childNode, toolTip));
             }
+            originalTexts.Add(new KeyValuePair<object, string>(node, node.Text));
             node.Text = Lng.Elem(node.Text);
+            return originalTexts;
         }
 
 #if NET481
-        private static void Translate(Menu.MenuItemCollection items, ToolTip toolTip, List<KeyValuePair<object, string>> originalTexts)
+        public static List<KeyValuePair<object, string>> Translate(Menu.MenuItemCollection items, ToolTip toolTip)
         {
+            var originalTexts = new List<KeyValuePair<object, string>>();
             if (items != null)
             {
                 foreach (MenuItem item in items)
                 {
                     originalTexts.Add(new KeyValuePair<object, string>(item, item.Text));
                     item.Text = Lng.Elem(item.Text);
-                    Translate(item.MenuItems, toolTip, originalTexts);
+                    originalTexts.AddRange(Translate(item.MenuItems, toolTip));
                 }
             }
+            return originalTexts;
         }
 #endif
 
-        private static void Translate(ComboBox comboBox, ComboBox.ObjectCollection items, ToolTip toolTip)
+        public static void Translate(ComboBox comboBox)
         {
+            if (comboBox == null)
+            {
+                throw new ArgumentNullException(nameof(comboBox));
+            }
+
+            var items = comboBox.Items;
+            if (items == null)
+            {
+                throw new ArgumentNullException(nameof(items));
+            }
+
+            var translated = false;
             var result = new List<object>();
             for (var i = 0; i < items.Count; i++)
             {
-                result.Add(items[i] is string text ? Lng.Elem(text) : items[i]);
+                if (items[i] is string text)
+                {
+                    translated = true;
+                    result.Add(Lng.Elem(text));
+                }
+                else
+                {
+                    result.Add(items[i]);
+                }
             }
-            comboBox.Items.Clear();
-            comboBox.Items.AddRange(result.ToArray());
+            if (translated)
+            {
+                var selectedIndex = comboBox.SelectedIndex;
+                comboBox.Items.Clear();
+                comboBox.Items.AddRange(result.ToArray());
+                comboBox.SelectedIndex = selectedIndex;
+            }
         }
 
-        public static void Translate(ToolStripItemCollection toolStripItems, ToolTip toolTip, List<KeyValuePair<object, string>> originalTexts)
+        public static List<KeyValuePair<object, string>> Translate(ToolStripItemCollection toolStripItems, ToolTip toolTip = null)
         {
             if (toolStripItems == null)
             {
                 throw new ArgumentNullException(nameof(toolStripItems));
             }
 
+            var originalTexts = new List<KeyValuePair<object, string>>();
             foreach (ToolStripItem toolStripItem in toolStripItems)
             {
                 originalTexts.Add(new KeyValuePair<object, string>(toolStripItem, toolStripItem.Text));
                 toolStripItem.Text = Lng.Elem(toolStripItem.Text);
-                TranslateTooltips(toolStripItem, originalTexts);
+                TranslateTooltips(toolStripItem);
                 if (toolStripItem is ToolStripMenuItem toolStripMenuItem)
                 {
-                    Translate(toolStripMenuItem.DropDownItems, toolTip, originalTexts);
+                    originalTexts.AddRange(Translate(toolStripMenuItem.DropDownItems, toolTip));
                 }
                 else if (toolStripItem is ToolStripDropDownButton toolStripDropDownButton)
                 {
-                    Translate(toolStripDropDownButton.DropDownItems, toolTip, originalTexts);
+                    originalTexts.AddRange(Translate(toolStripDropDownButton.DropDownItems, toolTip));
                 }
             }
+            return originalTexts;
         }
 
-        private static void TranslateTooltips(Control control, ToolTip toolTip)
+        public static void TranslateTooltips(Control control, ToolTip toolTip)
         {
-            if (toolTip == null)
+            var hint = toolTip?.GetToolTip(control);
+            if (!String.IsNullOrEmpty(hint))
             {
-                return;
-            }
-
-            // Check if the control has a ToolTip property and translate it
-            if (control is Control controlWithTooltip)
-            {
-                var hint = toolTip.GetToolTip(controlWithTooltip);
-                if (!String.IsNullOrEmpty(hint))
-                {
-                    toolTip.SetToolTip(controlWithTooltip, Lng.Elem(hint));
-                }
+                toolTip.SetToolTip(control, Lng.Elem(hint));
             }
         }
 
-        private static void TranslateTooltips(ToolStripItem toolStripItem, List<KeyValuePair<object, string>> originalTexts)
+        public static void TranslateTooltips(ToolStripItem toolStripItem)
         {
             if (toolStripItem is ToolStripButton button)
             {
