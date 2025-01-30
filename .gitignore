@@ -6,3 +6,5 @@
 packages/
 LanguageService/.~lock.Languages.ods#
 **/nuget.config*
+*.bak
+Mtf.LanguageService/.~lock.Languages.ods#
