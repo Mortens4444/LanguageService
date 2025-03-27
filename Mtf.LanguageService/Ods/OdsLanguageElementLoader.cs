@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using Mtf.LanguageService.Enums;
 using Mtf.LanguageService.Interfaces;
+using Mtf.LanguageService.Models;
 
 namespace Mtf.LanguageService.Ods
 {
@@ -12,12 +13,12 @@ namespace Mtf.LanguageService.Ods
         /// <summary>
         /// Memory usage can be reduced if only the current language elements are loaded, not all languages.
         /// </summary>
-        public Dictionary<(Language Language, string ElementIdentifier), List<string>> LoadElements(string filePath)
+        public Dictionary<Translation, List<string>> LoadElements(string filePath)
         {
             var odsReader = new OdsReader();
             var dataSet = odsReader.ReadFile(filePath);
 
-            var allLanguageElements = new Dictionary<(Language Language, string ElementIdentifier), List<string>>();
+            var allLanguageElements = new Dictionary<Translation, List<string>>();
             foreach (DataTable table in dataSet.Tables)
             {
                 for (int i = 0; i < table.Rows.Count; i++)
@@ -28,7 +29,7 @@ namespace Mtf.LanguageService.Ods
                     var language = (Language)Enum.Parse(typeof(Language), table.TableName);
 
                     var englishText = GetRowValue(dataSet.Tables["English"].Rows[i]);
-                    var key = (language, Normalize(englishText));
+                    var key = new Translation(language, Normalize(englishText));
                     var currentRowValue = Normalize(GetRowValue(row));
                     if (!String.IsNullOrEmpty(currentRowValue))
                     {

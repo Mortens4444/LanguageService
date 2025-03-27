@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using Mtf.LanguageService.Models;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace Mtf.LanguageService.Extensions
 {
     public static class XmlDocumentExtensions
     {
-        public static XmlNamespaceManager InitializeXmlNamespaceManager(this XmlDocument xmlDocument, List<(string prefix, string uri)> namespaces)
+        public static XmlNamespaceManager InitializeXmlNamespaceManager(this XmlDocument xmlDocument, List<XmlNamespace> namespaces)
         {
             var xmlNamespaceManager = new XmlNamespaceManager(xmlDocument.NameTable);
-            foreach (var (prefix, uri) in namespaces)
+            foreach (var xmlNamespace in namespaces)
             {
-                xmlNamespaceManager.AddNamespace(prefix, uri);
+                xmlNamespaceManager.AddNamespace(xmlNamespace.Prefix, xmlNamespace.Uri);
             }
             return xmlNamespaceManager;
         }

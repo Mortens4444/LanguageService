@@ -1,5 +1,6 @@
 ﻿using Mtf.LanguageService.Enums;
 using Mtf.LanguageService.Interfaces;
+using Mtf.LanguageService.Models;
 using Mtf.LanguageService.Ods;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Mtf.LanguageService
 
         public static Language DefaultLanguage;
 
-        public static readonly Dictionary<(Language Language, string ElementIdentifier), List<string>> AllLanguageElements;
+        public static readonly Dictionary<Translation, List<string>> AllLanguageElements;
 
         private static readonly ILanguageElementLoader languageElementLoader = new OdsLanguageElementLoader();
 
@@ -90,7 +91,7 @@ namespace Mtf.LanguageService
 
         private static string GetLanguageElement(string elementIdentifier, int index, Language language = Language.English)
         {
-            var key = (language, elementIdentifier);
+            var key = new Translation(language, elementIdentifier);
             return AllLanguageElements != null && AllLanguageElements.ContainsKey(key) ? AllLanguageElements[key][index] : null;
         }
     }
