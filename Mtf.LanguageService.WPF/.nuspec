@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Mtf.WPF.LanguageService</id>
-    <version>2.0.31</version>
+    <version>2.0.33</version>
     <title>Mtf.WPF.LanguageService</title>
     <authors>Mortens</authors>
     <owners>Mortens</owners>
@@ -17,6 +17,9 @@
 	<readme>docs\ReadMe.md</readme>
     <dependencies>
 	  <group targetFramework="net452">
+        <dependency id="System.IO.Compression" version="4.3.0" />
+	  </group>
+	  <group targetFramework="net462">
         <dependency id="System.IO.Compression" version="4.3.0" />
 	  </group>
 	  <group targetFramework="net48">
@@ -37,6 +40,7 @@
   <files>
     <file src="Mtf.WPF.LanguageService.targets" target="buildTransitive\Mtf.WPF.LanguageService.targets" />
     <file src="bin\Release\net452\**" target="lib\net452" exclude= "bin\Release\net452\Languages.ods" />
+    <file src="bin\Release\net462\**" target="lib\net462" exclude= "bin\Release\net462\Languages.ods" />
     <file src="bin\Release\net48\**" target="lib\net48" exclude= "bin\Release\net48\Languages.ods" />
     <file src="bin\Release\net481\**" target="lib\net481" exclude= "bin\Release\net481\Languages.ods" />
     <file src="bin\Release\net8.0-windows\**" target="lib\net8.0-windows7" exclude= "bin\Release\net8.0-windows\Languages.ods" />

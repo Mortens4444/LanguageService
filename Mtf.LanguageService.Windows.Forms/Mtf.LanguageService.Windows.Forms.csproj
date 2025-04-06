@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net9.0-windows;net8.0-windows;net481;net48;net452</TargetFrameworks>
+    <TargetFrameworks>net9.0-windows;net8.0-windows;net481;net48;net462;net452</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <OutputType>Library</OutputType>
@@ -12,7 +12,14 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Authors>Mortens</Authors>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DebugType>full</DebugType>
   </PropertyGroup>
+
+  <Target Name="SetFileVersionFromNuspec" BeforeTargets="BeforeBuild">
+    <XmlPeek XmlInputPath=".nuspec" Query="//*[local-name()='version']/text()">
+      <Output TaskParameter="Result" PropertyName="FileVersion" />
+    </XmlPeek>
+  </Target>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-windows|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
@@ -39,7 +46,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Mtf.Windows.Forms.LanguageService.1.0.9.nupkg" />
     <None Remove="nuget.exe" />
   </ItemGroup>
 
