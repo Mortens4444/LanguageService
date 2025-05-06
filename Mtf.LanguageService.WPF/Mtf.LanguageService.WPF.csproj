@@ -13,6 +13,7 @@
     <Authors>Mortens</Authors>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <DebugType>full</DebugType>
+    <WarningLevel>9999</WarningLevel>
   </PropertyGroup>
 
   <Target Name="SetFileVersionFromNuspec" BeforeTargets="BeforeBuild">
@@ -20,30 +21,6 @@
       <Output TaskParameter="Result" PropertyName="FileVersion" />
     </XmlPeek>
   </Target>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-windows|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0-windows|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net481|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net481|AnyCPU'">
-    <WarningLevel>9999</WarningLevel>
-  </PropertyGroup>
 
   <ItemGroup>
     <None Remove="nuget.exe" />

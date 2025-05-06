@@ -12,7 +12,7 @@
     <repository type="git" url="https://github.com/Mortens4444/LanguageService.git" branch="main" commit="9295126bb576da43f8d77b78b7bb797f47306081" />
     <description>Helper library to translate WPF applications.</description>
     <releaseNotes>Rename to Mtf.LanguageService.</releaseNotes>
-    <copyright>Copyright Â© 2020</copyright>
+    <copyright>Copyright © 2020</copyright>
     <tags>Lng Translator Language WPF Mortens</tags>
 	<readme>docs\ReadMe.md</readme>
     <dependencies>
