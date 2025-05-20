@@ -1,5 +1,5 @@
-﻿using Mtf.LanguageService.Extensions;
-using Mtf.LanguageService.Models;
+﻿using Mtf.Extensions;
+using Mtf.Extensions.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;

@@ -47,6 +47,18 @@ namespace Mtf.LanguageService
             return Elem(DefaultLanguage, elementIdentifier, index);
         }
 
+        public static string FormattedElem(string elementIdentifier, int index = 0, params object[] args)
+        {
+            var elem = Elem(DefaultLanguage, elementIdentifier, index);
+            return String.Format(elem, args);
+        }
+
+        public static string FormattedElem(Language toLanguage, string elementIdentifier, int index = 0, params object[] args)
+        {
+            var elem = Elem(toLanguage, elementIdentifier, index);
+            return String.Format(elem, args);
+        }
+
         /// <summary>
         /// Get a translation of an English expression.
         /// </summary>
