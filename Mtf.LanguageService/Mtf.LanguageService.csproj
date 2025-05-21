@@ -12,8 +12,16 @@
     <Authors>Mortens</Authors>
     <Company>Mortens</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <WarningLevel>9999</WarningLevel>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EmbedAllSources>true</EmbedAllSources>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-    <PackageReference Include="Mtf.Extensions" Version="1.0.0" />
+    <PackageReference Include="Mtf.Extensions" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,37 +11,49 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <UseWPF>true</UseWPF>
     <Authors>Mortens</Authors>
+    <WarningLevel>9999</WarningLevel>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <DebugType>full</DebugType>
-    <WarningLevel>9999</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EmbedAllSources>true</EmbedAllSources>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
 
-  <Target Name="SetFileVersionFromNuspec" BeforeTargets="BeforeBuild">
-    <XmlPeek XmlInputPath=".nuspec" Query="//*[local-name()='version']/text()">
-      <Output TaskParameter="Result" PropertyName="FileVersion" />
-    </XmlPeek>
-  </Target>
+  <PropertyGroup>
+    <Version>2.0.45</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
+  </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>$(ProjectName)</PackageId>
+    <Authors>Mortens</Authors>
+    <Company>Mortens</Company>
+    <Description>Helper library to translate WPF applications.</Description>
+    <PackageReadmeFile>.\ReadMe.md</PackageReadmeFile>
+    <PackageLicenseFile>.\LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Mortens4444/Mtf.LanguageService.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Lng Translator Language WPF Mortens</PackageTags>
+  </PropertyGroup>
   <ItemGroup>
-    <None Remove="nuget.exe" />
+    <None Include=".\ReadMe.md" Pack="true" PackagePath="" />
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="bin\Release\net9.0-windows\Languages.ods" Pack="true" PackagePath="buildTransitive\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Mtf.Extensions" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="ReadMe.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
