@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 set "ProjectName=Mtf.LanguageService.Windows.Forms"
 set "TargetDir=C:\NuGetTest"
 
-for %%F in ("%TargetDir%\%ProjectName%.*.nupkg") do (
+for %%F in ("%TargetDir%\Mtf.Windows.Forms.LanguageService.*.nupkg") do (
     set "FileName=%%~nxF"
     if not "!FileName!" == "!FileName:.symbols=!" (
         echo Deleting: %%F
@@ -12,14 +12,14 @@ for %%F in ("%TargetDir%\%ProjectName%.*.nupkg") do (
     )
 )
 
-for %%F in ("%TargetDir%\%ProjectName%.*.nupkg") do call :ProcessFile "%%F"
+for %%F in ("%TargetDir%\Mtf.Windows.Forms.LanguageService.*.nupkg") do call :ProcessFile "%%F"
 goto :UpdatePackages
 
 :ProcessFile
 set "FilePath=%~1"
 set "FileName=%~nx1"
 
-call set "RestPart=%%FileName:%ProjectName%.=%%"
+call set "RestPart=%%FileName:Mtf.Windows.Forms.LanguageService.=%%"
 echo !RestPart! | findstr /R "^[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*" >nul
 
 if !errorlevel! == 0 (

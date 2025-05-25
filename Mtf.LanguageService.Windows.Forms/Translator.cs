@@ -99,14 +99,14 @@ namespace Mtf.LanguageService.Windows.Forms
                     }
                 }
 
-                if (control is ListView listview)
+                if (control is ListView listView)
                 {
-                    foreach (ListViewGroup listViewGroup in listview.Groups)
+                    foreach (ListViewGroup listViewGroup in listView.Groups)
                     {
                         result.Add(new KeyValuePair<object, string>(listViewGroup, listViewGroup.Header));
                         listViewGroup.Header = Lng.Elem(listViewGroup.Header);
                     }
-                    foreach (ColumnHeader column in listview.Columns)
+                    foreach (ColumnHeader column in listView.Columns)
                     {
                         result.Add(new KeyValuePair<object, string>(column, column.Text));
                         column.Text = Lng.Elem(column.Text);
@@ -197,7 +197,6 @@ namespace Mtf.LanguageService.Windows.Forms
                 {
                     listViewGroup.Header = originalText.Value;
                 }
-                
             }
         }
 

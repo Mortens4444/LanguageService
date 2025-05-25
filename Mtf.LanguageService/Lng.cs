@@ -25,7 +25,7 @@ namespace Mtf.LanguageService
             SetDefaultLanguage();
 
             var languageFiles = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, LanguageFile);
-            if (languageFiles.Any())
+            if (languageFiles.Length != 0)
             {
                 AllLanguageElements = languageElementLoader.LoadElements(languageFiles.First());
             }
@@ -104,7 +104,7 @@ namespace Mtf.LanguageService
         private static string GetLanguageElement(string elementIdentifier, int index, Language language = Language.English)
         {
             var key = new Translation(language, elementIdentifier);
-            return AllLanguageElements != null && AllLanguageElements.ContainsKey(key) ? AllLanguageElements[key][index] : null;
+            return AllLanguageElements != null && AllLanguageElements.TryGetValue(key, out var value) ? value[index] : null;
         }
     }
 }
