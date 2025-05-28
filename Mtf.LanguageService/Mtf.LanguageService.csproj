@@ -37,7 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-    <PackageReference Include="Mtf.Extensions" Version="1.0.13" />
+    <PackageReference Include="Mtf.Extensions" Version="1.0.16" />
   </ItemGroup>
 
   <ItemGroup>
