@@ -23,7 +23,14 @@
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-
+  
+  <PropertyGroup>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Include="..\LICENSE.txt">
       <Pack>True</Pack>

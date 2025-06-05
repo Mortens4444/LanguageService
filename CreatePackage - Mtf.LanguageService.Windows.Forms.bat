@@ -50,6 +50,7 @@ for /R %%P in (*.csproj) do (
     popd
 )
 
+powershell -ExecutionPolicy Bypass -File ".\IncrementPackageVersion.ps1" -CsprojFile "Mtf.LanguageService\Mtf.LanguageService.csproj"
 for /f %%V in ('powershell -ExecutionPolicy Bypass -File ".\IncrementPackageVersion.ps1" -CsprojFile "%ProjectName%\%ProjectName%.csproj"') do set "PackageVersion=%%V"
 git add -A
 git commit -m "%ProjectName% NuGet package release %PackageVersion%"
