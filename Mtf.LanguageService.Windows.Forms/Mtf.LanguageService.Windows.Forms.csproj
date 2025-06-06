@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>3.0.87</Version>
+    <Version>3.0.95</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <InformationalVersion>$(Version)</InformationalVersion>
@@ -44,15 +44,26 @@
     <None Include=".\ReadMe.md" Pack="true" PackagePath="" />
     <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
     <None Include="bin\Release\net9.0-windows\Languages.ods" Pack="true" PackagePath="buildTransitive\" />
+    <Content Include="bin\Release\net462\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net462" />
+    <Content Include="bin\Release\net481\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net481" />
+    <Content Include="bin\Release\net8.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net8.0-windows7.0" />
+    <Content Include="bin\Release\net9.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net9.0-windows7.0 " />
+    <Content Include="bin\Release\net462\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net462" />
+    <Content Include="bin\Release\net481\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net481" />
+    <Content Include="bin\Release\net8.0-windows\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net8.0-windows7.0" />
+    <Content Include="bin\Release\net9.0-windows\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net9.0-windows7.0" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="Mtf.Extensions" Version="1.0.16" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj" Pack="true" />
+    <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj" Pack="true">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
