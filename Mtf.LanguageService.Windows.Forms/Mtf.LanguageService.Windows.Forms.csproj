@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>3.0.95</Version>
+    <Version>3.0.96</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <InformationalVersion>$(Version)</InformationalVersion>
@@ -60,7 +60,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj" Pack="true">
+    <ProjectReference Include="..\Mtf.LanguageService\Mtf.LanguageService.csproj">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
