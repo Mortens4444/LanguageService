@@ -1,0 +1,8 @@
+<Project>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Languages.ods">
+      <Pack>True</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

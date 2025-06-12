@@ -44,7 +44,8 @@
   <ItemGroup>
     <None Include=".\ReadMe.md" Pack="true" PackagePath="" />
     <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
-    <None Include="bin\Release\net9.0-windows\Languages.ods" Pack="true" PackagePath="buildTransitive\" />
+    <None Include="..\Mtf.LanguageService\Languages.ods" Pack="true" PackagePath="buildTransitive\" />
+    <None Include="..\Mtf.LanguageService\Mtf.LanguageService.targets" Pack="true" PackagePath="buildTransitive\" />
     <Content Include="bin\Release\net462\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net462" />
     <Content Include="bin\Release\net481\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net481" />
     <Content Include="bin\Release\net8.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net8.0-windows7.0" />
