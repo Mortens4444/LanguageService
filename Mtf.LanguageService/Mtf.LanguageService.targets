@@ -1,8 +1,6 @@
-<Project>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Languages.ods">
-      <Pack>True</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CopyLanguagesFile" AfterTargets="Build">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)\Languages.ods"
+          DestinationFolder="$(OutputPath)" />
+  </Target>
 </Project>
