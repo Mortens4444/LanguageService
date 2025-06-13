@@ -29,6 +29,7 @@
     <FileVersion>$(Version)</FileVersion>
     <InformationalVersion>$(Version)</InformationalVersion>
   </PropertyGroup>
+
   <PropertyGroup>
     <PackageId>Mtf.Windows.Forms.LanguageService</PackageId>
     <Authors>Mortens</Authors>
@@ -48,7 +49,7 @@
     <Content Include="bin\Release\net462\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net462" />
     <Content Include="bin\Release\net481\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net481" />
     <Content Include="bin\Release\net8.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net8.0-windows7.0" />
-    <Content Include="bin\Release\net9.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net9.0-windows7.0 " />
+    <Content Include="bin\Release\net9.0-windows\Mtf.LanguageService.dll" Pack="true" PackagePath="lib\net9.0-windows7.0" />
     <Content Include="bin\Release\net462\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net462" />
     <Content Include="bin\Release\net481\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net481" />
     <Content Include="bin\Release\net8.0-windows\Mtf.LanguageService.pdb" Pack="true" PackagePath="lib\net8.0-windows7.0" />
